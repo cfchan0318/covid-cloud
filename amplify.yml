@@ -1,14 +1,18 @@
 version: 0.1
+backend:
+  phases:
+    build:
+      commands:
+      - node index.js
+      
 frontend:
   phases:
-    preBuild:
+    build:
       commands:
         - cd client && npm run build
     # IMPORTANT - Please verify your build commands
     build:
       commands: []
-    postBuild:
-      - cd .. && node index.js
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
