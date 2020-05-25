@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd client && npm install --only=dev && npm install && npm run build
+        - cd client && npm run build
     # IMPORTANT - Please verify your build commands
     build:
       commands: []
