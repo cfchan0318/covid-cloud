@@ -3,11 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        - node index.js
+        - cd client && npm install --only=dev && npm install && npm run build
     # IMPORTANT - Please verify your build commands
     build:
-      commands: 
-        - cd client && npm install --only=dev && npm install && npm run build
+      commands: []
+    postBuild:
+      - cd .. && node index.js
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
