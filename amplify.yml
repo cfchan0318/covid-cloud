@@ -6,11 +6,11 @@ backend:
       - node index.js
 
 frontend:
-
+  phases:
     preBuild:
       commands:
         - cd client && npm run build
-    # IMPORTANT - Please verify your build commands
+       # IMPORTANT - Please verify your build commands
     build:
       commands: []
   artifacts:
