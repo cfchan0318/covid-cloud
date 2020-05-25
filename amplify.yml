@@ -9,7 +9,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd client && npm run build
+        - cd client && npm start
        # IMPORTANT - Please verify your build commands
     build:
       commands: []
